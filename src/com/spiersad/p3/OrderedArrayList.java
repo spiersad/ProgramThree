@@ -10,6 +10,7 @@ package com.spiersad.p3;
 public class OrderedArrayList<T extends Comparable> extends ADTArrayList {
 
     public void add(T element){
+        checkArray();
         int first = 0;
         int last = index-1;
         int mid = 1;
@@ -43,6 +44,7 @@ public class OrderedArrayList<T extends Comparable> extends ADTArrayList {
 
     }
     private void makeRoom(int indexArray){
+        checkArray();
         for (int i = index; i >= indexArray; i--){
             array[i+1] = array[i];
         }

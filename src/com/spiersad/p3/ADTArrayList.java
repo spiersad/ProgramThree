@@ -6,7 +6,7 @@ package com.spiersad.p3;
  * To change this template use File | Settings | File Templates.
  */
 public class ADTArrayList<T>{
-    protected final int GENERIC_ARRAY_LENGTH = 20000;
+    protected final int GENERIC_ARRAY_LENGTH = 100;
     protected T[] array;
     protected int index;
     public ADTArrayList(){
@@ -46,5 +46,14 @@ public class ADTArrayList<T>{
             if ((i+1) % 25 == 0) stringBuffer.append('\n');
         }
         return stringBuffer.toString();
+    }
+    protected void checkArray(){
+        if (index == array.length-1){
+            T[] temp = (T[]) new Object[array.length*2];
+            for (int i = 0; i < array.length; i++){
+                temp[i] = array[i];
+            }
+            array = temp;
+        }
     }
 }
