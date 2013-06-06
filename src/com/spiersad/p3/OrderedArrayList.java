@@ -9,6 +9,10 @@ package com.spiersad.p3;
  */
 public class OrderedArrayList<T extends Comparable> extends ADTArrayList {
 
+    /**
+     * This method will add an object to the list in order from least to greatest of the objects compareTo
+     * @param element object to be added to the list
+     */
     public void add(T element){
         checkArray();
         int first = 0;

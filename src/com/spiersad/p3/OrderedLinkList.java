@@ -8,6 +8,11 @@ package com.spiersad.p3;
  * To change this template use File | Settings | File Templates.
  */
 public class OrderedLinkList <T extends Comparable> extends ADTLinkList {
+
+    /**
+     * This method will add an object to the array in order from least to greatest of the objects compareTo
+     * @param element object to be added to the array
+     */
     public void add(T element){
         LinearNode<T> node = new LinearNode<T>();
         node.setElement(element);

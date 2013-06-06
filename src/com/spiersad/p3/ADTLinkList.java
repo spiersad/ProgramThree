@@ -1,16 +1,18 @@
 package com.spiersad.p3;
 
 /**
- * Created with IntelliJ IDEA.
- * User: spiers
- * Date: 6/5/13
- * Time: 2:21 PM
- * To change this template use File | Settings | File Templates.
+ * Abstract data type for link list
+ * @author Adrian Spiers
+ * @version 06/06/13
+ *
  */
 public class ADTLinkList <T>{
     protected LinearNode <T> head, tail, current;
     protected int index;
 
+    /**
+     * Default constructor. Initializes head tail and current to null and index to 0
+     */
     public ADTLinkList() {
         head = null;
         tail = null;
@@ -18,6 +20,10 @@ public class ADTLinkList <T>{
         index = 0;
     }
 
+    /**
+     * Remove and returns the head node
+     * @return returns the element in the head node
+     */
     public T removeFirst(){
         if (index == 0) throw new IndexOutOfBoundsException();
         T temp = head.getElement();
@@ -27,6 +33,10 @@ public class ADTLinkList <T>{
         return temp;
     }
 
+    /**
+     * Removes and returns the tail node
+     * @return returns the element in the tail node
+     */
     public T removeLast(){
         if (index == 0) throw new IndexOutOfBoundsException();
         T temp = tail.getElement();
@@ -38,24 +48,44 @@ public class ADTLinkList <T>{
         return temp;
     }
 
+    /**
+     * Returns the element in the head node
+     * @return returns the element in the head node
+     */
     public T first(){
         if (index == 0) throw new IndexOutOfBoundsException();
         return head.getElement();
     }
 
+    /**
+     * Returns the element in the tail node
+     * @return Returns the element in the tail node
+     */
     public T last(){
         if (index == 0) throw new IndexOutOfBoundsException();
         return tail.getElement();
     }
 
+    /**
+     * Checks link list to see if it is empty
+     * @return returns true if link list is empty
+     */
     public boolean isEmpty(){
         return index == 0;
     }
 
+    /**
+     * Returns the number of nodes in the list
+     * @return returns the index
+     */
     public int size(){
         return index;
     }
 
+    /**
+     * Creates a string of all the link list elements toString and returns it
+     * @return returns the created string
+     */
     public String toString(){
         StringBuffer stringBuffer = new StringBuffer();
         int i = 1;
