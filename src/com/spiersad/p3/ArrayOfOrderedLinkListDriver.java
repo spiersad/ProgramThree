@@ -20,13 +20,12 @@ public class ArrayOfOrderedLinkListDriver {
             arrayList[i] = new OrderedLinkList<String>();
         }
 
-
+        timerStart = System.nanoTime();
         try {
             scanner = new Scanner(file);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        timerStart = System.nanoTime();
         while (scanner.hasNext()){
             String scannedIn = scanner.next();
             if (scannedIn.compareTo("A") <= 0){
@@ -48,13 +47,12 @@ public class ArrayOfOrderedLinkListDriver {
                 }
             }
         }
-        timerStop = System.nanoTime();
         scanner.close();
-        timerElapsed = (timerStop - timerStart) / 1000000000;
         for (int i = 0; i < NUMBER_OF_LETTERS_IN_ALPHABET; i++){
             System.out.println(arrayList[i].toString());
         }
-
+        timerStop = System.nanoTime();
+        timerElapsed = (timerStop - timerStart) / 1000000000;
         System.out.println("Array of ordered link list time in Seconds: " + timerElapsed);
     }
 }

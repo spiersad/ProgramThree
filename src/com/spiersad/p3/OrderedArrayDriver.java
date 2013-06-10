@@ -16,20 +16,19 @@ public class OrderedArrayDriver {
         Scanner scanner = null;
         OrderedArrayList<String> array = new OrderedArrayList<String>();
 
-
+        timerStart = System.nanoTime();
         try {
             scanner = new Scanner(file);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        timerStart = System.nanoTime();
         while (scanner.hasNext()){
             array.add(scanner.next());
         }
-        timerStop = System.nanoTime();
         scanner.close();
-        timerElapsed = (timerStop - timerStart) / 1000000000;
         System.out.println(array.toString());
+        timerStop = System.nanoTime();
+        timerElapsed = (timerStop - timerStart) / 1000000000;
         System.out.println("Ordered array time in Seconds: " + timerElapsed);
     }
 }
