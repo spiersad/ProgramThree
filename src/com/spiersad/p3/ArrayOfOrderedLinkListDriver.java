@@ -5,19 +5,18 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
- * Created with IntelliJ IDEA.
- * User: spiers
- * Date: 6/8/13
- * Time: 9:29 AM
- * To change this template use File | Settings | File Templates.
+ * Driver for the array of ordered link lists
+ * @author Adrian Spiers
+ * @version 06/10/13
  */
 public class ArrayOfOrderedLinkListDriver {
     public static void main(String[] args) {
+        final int NUMBER_OF_LETTERS_IN_ALPHABET = 26;
         double timerStart, timerStop, timerElapsed;
         File file =  new File("/home/spiers/IdeaProjects/ProgramThree/src/wordfile.txt");
         Scanner scanner = null;
-        OrderedLinkList<String>[] arrayList = (OrderedLinkList<String>[]) new OrderedLinkList[26];
-        for (int i = 0; i < 26; i++){
+        OrderedLinkList<String>[] arrayList = (OrderedLinkList<String>[]) new OrderedLinkList[NUMBER_OF_LETTERS_IN_ALPHABET];
+        for (int i = 0; i < NUMBER_OF_LETTERS_IN_ALPHABET; i++){
             arrayList[i] = new OrderedLinkList<String>();
         }
 
@@ -34,7 +33,7 @@ public class ArrayOfOrderedLinkListDriver {
                 arrayList[0].add(scannedIn);
             }
             else if (scannedIn.compareTo("Z") >= 0){
-                arrayList[25].add(scannedIn);
+                arrayList[NUMBER_OF_LETTERS_IN_ALPHABET-1].add(scannedIn);
             }
             else {
                 int index = 0;
@@ -52,7 +51,7 @@ public class ArrayOfOrderedLinkListDriver {
         timerStop = System.nanoTime();
         scanner.close();
         timerElapsed = (timerStop - timerStart) / 1000000000;
-        for (int i = 0; i < 26; i++){
+        for (int i = 0; i < NUMBER_OF_LETTERS_IN_ALPHABET; i++){
             System.out.println(arrayList[i].toString());
         }
 

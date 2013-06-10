@@ -5,10 +5,9 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
- * Driver for the Array list. Reads 19000 words to an ordered array list. It then prints
- * them and and the time it took to complete the opperation
+ * Driver for the ordered array
  * @author Adrian Spiers
- * @version 06/08/13
+ * @version 06/10/13
  */
 public class OrderedArrayDriver {
     public static void main(String[] args) {
