@@ -7,7 +7,7 @@ package com.spiersad.p3;
  * Time: 11:33 AM
  * To change this template use File | Settings | File Templates.
  */
-public class OrderedArrayList<T extends Comparable> extends ADTArrayList {
+public class OrderedArrayList<T extends Comparable> extends ArrayList {
 
     /**
      * This method will add an object to the list in order from least to greatest of the objects compareTo

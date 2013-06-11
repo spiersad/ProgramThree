@@ -7,7 +7,7 @@ package com.spiersad.p3;
  * Time: 2:23 PM
  * To change this template use File | Settings | File Templates.
  */
-public class OrderedLinkList <T extends Comparable> extends ADTLinkList {
+public class OrderedLinkList<T extends Comparable> extends LinkList {
 
     /**
      * This method will add an object to the array in order from least to greatest of the objects compareTo

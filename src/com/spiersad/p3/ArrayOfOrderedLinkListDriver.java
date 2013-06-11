@@ -20,6 +20,8 @@ public class ArrayOfOrderedLinkListDriver {
             arrayList[i] = new OrderedLinkList<String>();
         }
 
+
+
         timerStart = System.nanoTime();
         try {
             scanner = new Scanner(file);
@@ -28,24 +30,7 @@ public class ArrayOfOrderedLinkListDriver {
         }
         while (scanner.hasNext()){
             String scannedIn = scanner.next();
-            if (scannedIn.compareTo("A") <= 0){
-                arrayList[0].add(scannedIn);
-            }
-            else if (scannedIn.compareTo("Z") >= 0){
-                arrayList[NUMBER_OF_LETTERS_IN_ALPHABET-1].add(scannedIn);
-            }
-            else {
-                int index = 0;
-                for (char letter = 'B'; letter <= 'Y'; letter++){
-                    StringBuffer test = new StringBuffer();
-                    test.append(letter);
-                    if (scannedIn.compareTo(test.toString()) < 0){
-                        arrayList[index].add(scannedIn);
-                        break;
-                    }
-                    index++;
-                }
-            }
+            arrayList[scannedIn.charAt(0) - 'A'].add(scannedIn);
         }
         scanner.close();
         for (int i = 0; i < NUMBER_OF_LETTERS_IN_ALPHABET; i++){

@@ -6,14 +6,14 @@ package com.spiersad.p3;
  * @version 06/06/13
  *
  */
-public class ADTLinkList <T>{
+public class LinkList<T>{
     protected LinearNode <T> head, tail, current;
     protected int index;
 
     /**
      * Default constructor. Initializes head tail and current to null and index to 0
      */
-    public ADTLinkList() {
+    public LinkList() {
         head = null;
         tail = null;
         current = null;

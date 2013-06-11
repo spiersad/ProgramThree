@@ -6,7 +6,7 @@ package com.spiersad.p3;
  * @version 06/06/13
  *
  */
-public class ADTArrayList<T>{
+public class ArrayList<T>{
     protected final int GENERIC_ARRAY_LENGTH = 100;
     protected T[] array;
     protected int index;
@@ -14,7 +14,7 @@ public class ADTArrayList<T>{
     /**
      * Default constructor. Initializes the array to a generic length of 100 and the index to 0
      */
-    public ADTArrayList(){
+    public ArrayList(){
         array = (T[]) new Object[GENERIC_ARRAY_LENGTH];
         index = 0;
     }
@@ -23,7 +23,7 @@ public class ADTArrayList<T>{
      * Constructs a array list of specific size
      * @param size the size of the new array list
      */
-    public  ADTArrayList(int size){
+    public ArrayList(int size){
         array = (T[]) new Comparable[size];
         index = 0;
     }
